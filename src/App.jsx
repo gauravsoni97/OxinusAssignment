@@ -30,7 +30,7 @@ const App = () => {
           <Route path="/favourite" element={<Favourite />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/menu/:categoryName" element={<CategoryPage favorites={favorites}  setFavorites={setFavorites} />} />
-          <Route path="/randommeal" element={<RandomMeal />} />
+          <Route path="/randommeal" element={<RandomMeal favorites={favorites}  setFavorites={setFavorites} />} />
         </Routes>
       </div>
     </Router>
