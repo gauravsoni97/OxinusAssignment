@@ -5,16 +5,17 @@ const Navbar = ({ toggleSidebar }) => {
   return (
     <nav class="bg-white border-gray-200 dark:bg-gray-900">
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <Link to="/" class="flex items-center space-x-3 rtl:space-x-reverse">
           <svg
             onClick={toggleSidebar}
             viewBox="0 0 1024 1024"
             fill="white"
             height="1em"
             width="1em"
+            className="cursor-pointer"
           >
             <path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z" />
           </svg>
+        <Link to="/" class="flex items-center space-x-3 rtl:space-x-reverse">
           <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
             OxinusMeals
           </span>

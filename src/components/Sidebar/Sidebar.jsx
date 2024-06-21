@@ -2,6 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Sidebar = ({ showSideBar, toggleSidebar }) => {
+  const handleLinkClick = () => {
+    toggleSidebar(); // Close the sidebar
+  };
   return (
     <div
       id="drawer-navigation"
@@ -37,6 +40,7 @@ const Sidebar = ({ showSideBar, toggleSidebar }) => {
         <ul class="space-y-2 font-medium">
           <li>
             <Link
+              onClick={handleLinkClick}
               to="/"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
@@ -53,6 +57,7 @@ const Sidebar = ({ showSideBar, toggleSidebar }) => {
           </li>
           <li>
             <Link
+              onClick={handleLinkClick}
               to="/about"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
@@ -69,6 +74,7 @@ const Sidebar = ({ showSideBar, toggleSidebar }) => {
           </li>
           <li>
             <Link
+              onClick={handleLinkClick}
               to="/favourite"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
@@ -88,6 +94,7 @@ const Sidebar = ({ showSideBar, toggleSidebar }) => {
           </li>
           <li>
             <Link
+              onClick={handleLinkClick}
               to="/menu"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
@@ -104,6 +111,7 @@ const Sidebar = ({ showSideBar, toggleSidebar }) => {
           </li>
           <li>
             <Link
+              onClick={handleLinkClick}
               to="/randommeal"
               class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group"
             >
