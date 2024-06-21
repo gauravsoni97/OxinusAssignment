@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   const [categories, setCategories] = useState([]);
@@ -33,12 +34,14 @@ const Menu = () => {
       </center>
       <ul className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-12">
         {categories.map((category) => (
-          <li
-            key={category.idCategory}
-            class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 cursor-pointer"
-          >
-            {category.strCategory}
-          </li>
+          <Link to={`/menu/${category.strCategory}`}>
+            <li
+              key={category.idCategory}
+              class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 cursor-pointer"
+            >
+              {category.strCategory}
+            </li>
+          </Link>
         ))}
       </ul>
     </div>

@@ -7,6 +7,7 @@ import Favourite from "./pages/Favourite";
 import Menu from "./pages/Menu";
 import RandomMeal from "./pages/RandomMeal";
 import Navbar from "./components/Navbar/Navbar";
+import CategoryPage from "./pages/CategoryPage";
 
 const App = () => {
   const [showSideBar, setShowSideBar] = useState(false);
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/favourite" element={<Favourite />} />
           <Route path="/menu" element={<Menu />} />
+          <Route path="/menu/:categoryName" element={<CategoryPage />} />
           <Route path="/randommeal" element={<RandomMeal />} />
         </Routes>
       </div>
