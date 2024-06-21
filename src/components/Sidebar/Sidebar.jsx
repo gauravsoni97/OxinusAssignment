@@ -33,7 +33,7 @@ const Sidebar = ({ showSideBar, toggleSidebar }) => {
         </svg>
         <span className="sr-only">Close menu</span>
       </button>
-      <div className="py-4 overflow-y-auto">
+      <div className="py-4 overflow-y-auto mt-6">
         <ul class="space-y-2 font-medium">
           <li>
             <Link
