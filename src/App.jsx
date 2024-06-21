@@ -28,8 +28,8 @@ const App = () => {
       <Sidebar showSideBar={showSideBar} toggleSidebar={toggleSidebar} />
       <div>
         <Routes>
-          <Route path="/" exact element={<Home/>} />
-          <Route path="/about" element={<About/>} />
+          <Route path="/" exact element={<Home />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </Router>
