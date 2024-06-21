@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-const CategoryPage = () => {
+const CategoryPage = ({ favorites, setFavorites }) => {
   const { categoryName } = useParams();
   const [meals, setMeals] = useState([]);
-  const [favorites, setFavorites] = useState([]);
   console.log(favorites);
 
   useEffect(() => {
@@ -44,6 +43,11 @@ const CategoryPage = () => {
       setFavorites(updatedFavorites);
     }
   };
+
+  useEffect(() => {
+    // Save favorites to local storage whenever favorites change
+    localStorage.setItem("favorites", JSON.stringify(favorites));
+  }, [favorites]);
 
   return (
     <div className="max-w-screen-xl mx-auto mt-12 p-6">

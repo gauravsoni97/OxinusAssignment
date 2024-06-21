@@ -11,6 +11,8 @@ import CategoryPage from "./pages/CategoryPage";
 
 const App = () => {
   const [showSideBar, setShowSideBar] = useState(false);
+    const [favorites, setFavorites] = useState([]);
+
 
   const toggleSidebar = () => {
     setShowSideBar(!showSideBar);
@@ -27,7 +29,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/favourite" element={<Favourite />} />
           <Route path="/menu" element={<Menu />} />
-          <Route path="/menu/:categoryName" element={<CategoryPage />} />
+          <Route path="/menu/:categoryName" element={<CategoryPage favorites={favorites}  setFavorites={setFavorites} />} />
           <Route path="/randommeal" element={<RandomMeal />} />
         </Routes>
       </div>
