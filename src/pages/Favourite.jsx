@@ -1,5 +1,3 @@
-// Favorite.jsx
-
 import React from "react";
 
 const Favorite = () => {

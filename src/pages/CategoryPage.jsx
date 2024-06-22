@@ -28,15 +28,12 @@ const CategoryPage = ({ favorites, setFavorites }) => {
     fetchMealsByCategory();
   }, [categoryName]);
 
-  // Function to toggle favorite status of a meal
   const toggleFavorite = (mealId) => {
     const index = favorites.findIndex((meal) => meal.idMeal === mealId);
     if (index === -1) {
-      // Meal is not favorited, add it to favorites
       const mealToAdd = meals.find((meal) => meal.idMeal === mealId);
       setFavorites([...favorites, mealToAdd]);
     } else {
-      // Meal is already favorited, remove it from favorites
       const updatedFavorites = favorites.filter(
         (meal) => meal.idMeal !== mealId
       );
@@ -45,7 +42,6 @@ const CategoryPage = ({ favorites, setFavorites }) => {
   };
 
   useEffect(() => {
-    // Save favorites to local storage whenever favorites change
     localStorage.setItem("favorites", JSON.stringify(favorites));
   }, [favorites]);
 

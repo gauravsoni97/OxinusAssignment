@@ -1,11 +1,8 @@
-// RandomMealGenerator.jsx
-
 import React, { useEffect, useState } from "react";
 
 const RandomMealGenerator = ({ favorites, setFavorites }) => {
   const [randomMeal, setRandomMeal] = useState(null);
 
-  // Function to fetch a random meal
   const fetchRandomMeal = async () => {
     try {
       const response = await fetch(
@@ -21,20 +18,17 @@ const RandomMealGenerator = ({ favorites, setFavorites }) => {
     }
   };
 
-   // Function to toggle favorite status of the random meal
-   const toggleFavorite = () => {
+  const toggleFavorite = () => {
     if (!randomMeal) return;
 
     const index = favorites.findIndex(
       (meal) => meal.idMeal === randomMeal.idMeal
     );
     if (index === -1) {
-      // Meal is not favorited, add it to favorites
       const updatedFavorites = [...favorites, randomMeal];
       setFavorites(updatedFavorites);
       localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
     } else {
-      // Meal is already favorited, remove it from favorites
       const updatedFavorites = favorites.filter(
         (meal) => meal.idMeal !== randomMeal.idMeal
       );
