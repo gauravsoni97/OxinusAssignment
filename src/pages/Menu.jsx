@@ -26,8 +26,8 @@ const Menu = () => {
   return (
     <div className="max-w-screen-md mx-auto mt-12">
       <center>
-        <h1 class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
-          <span class="underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">
+        <h1 class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl text-white">
+          <span class="underline underline-offset-3 decoration-8 decoration-blue-400 decoration-blue-600">
             Categories
           </span>
         </h1>
@@ -37,7 +37,7 @@ const Menu = () => {
           <Link to={`/menu/${category.strCategory}`}>
             <li
               key={category.idCategory}
-              class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700 cursor-pointer"
+              class="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 bg-gray-800 border-gray-700 hover:bg-gray-700 cursor-pointer"
             >
               {category.strCategory}
             </li>

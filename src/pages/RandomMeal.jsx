@@ -48,7 +48,7 @@ const RandomMealGenerator = ({ favorites, setFavorites }) => {
       </h1>
 
       {randomMeal && (
-        <div class="max-w-xs mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative">
+        <div class="max-w-xs mx-auto bg-white border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700 relative">
           <button
             className={`w-8 h-8 absolute bottom-[1.5rem] right-[1rem] rounded-full text-gray-500 hover:text-red-500 focus:outline-none transition-colors duration-300 ${
               favorites &&
@@ -79,7 +79,7 @@ const RandomMealGenerator = ({ favorites, setFavorites }) => {
           />
 
           <div class="p-5">
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+            <p class="mb-3 font-normal text-gray-700 text-gray-400">
               {randomMeal.strMeal}
             </p>
           </div>

@@ -35,7 +35,7 @@ const Favorite = ({ setFavorites }) => {
         {favorites.map((meal) => (
           <li
             key={meal.idMeal}
-            className="max-w-xs mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 relative"
+            className="max-w-xs mx-auto bg-white border border-gray-200 rounded-lg shadow bg-gray-800 border-gray-700 relative"
           >
             <button
               className={`w-8 h-8 absolute bottom-[1.5rem] right-[1rem] rounded-full text-gray-500 hover:text-red-500 focus:outline-none transition-colors duration-300 ${
@@ -63,7 +63,7 @@ const Favorite = ({ setFavorites }) => {
             />
 
             <div className="p-5">
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              <p className="mb-3 font-normal text-gray-700 text-gray-400">
                 {meal.strMeal}
               </p>
             </div>

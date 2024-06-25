@@ -54,7 +54,7 @@ const CategoryPage = ({ favorites, setFavorites }) => {
         {meals.map((meal) => (
           <li
             key={meal.idMeal}
-            className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 relative"
+            className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 border-gray-700 bg-gray-800 hover:bg-gray-700 relative"
           >
             <button
               className={`w-8 h-8  absolute top-0 right-0 rounded-full text-gray-500 hover:text-red-500 focus:outline-none transition-colors duration-300 ${
@@ -91,7 +91,7 @@ const CategoryPage = ({ favorites, setFavorites }) => {
               alt={meal.strMeal}
             />
             <div className="flex flex-col justify-between p-4 leading-normal ">
-              <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+              <p className="mb-3 font-normal text-gray-700 text-gray-400">
                 {meal.strMeal}
               </p>
             </div>
