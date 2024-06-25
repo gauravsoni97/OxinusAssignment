@@ -27,7 +27,7 @@ const App = () => {
         <Routes>
           <Route path="/" exact element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/favourite" element={<Favourite />} />
+          <Route path="/favourite" element={<Favourite favorites={favorites}  setFavorites={setFavorites} />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/menu/:categoryName" element={<CategoryPage favorites={favorites}  setFavorites={setFavorites} />} />
           <Route path="/randommeal" element={<RandomMeal favorites={favorites}  setFavorites={setFavorites} />} />
